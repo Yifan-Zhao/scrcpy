@@ -195,6 +195,16 @@ device over TCP/IP:
 5. Connect to your device: `adb connect DEVICE_IP:5555` _(replace `DEVICE_IP`)_.
 6. Run `scrcpy` as usual.
 
+Fix ADB over WiFi disconnects when unplugged on HUAWEI phones:
+In developer options 1) turn on "Allow USB debugging", 2) turn on "Allow ADB debugging in charge only mode" and 3) turn off "Always prompt when connecting to USB".
+
+Then do usuall steps:
+1. adb tcpip 5555
+2. adb connect <ip>:5555
+3. unplug phone
+
+So ADB over WiFi works!
+
 It may be useful to decrease the bit-rate and the definition:
 
 ```bash
